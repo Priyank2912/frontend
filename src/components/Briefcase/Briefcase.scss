@@ -1,0 +1,118 @@
+@import '../../sassStyles/abstracts/_variables';
+
+.briefcase {
+  width: 100%;
+  height: 29rem;
+  padding: 2rem;
+  display: flex;
+  background-color: $color-white;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 7rem;
+
+  @include respond(normal) {
+    height: auto;
+  }
+
+  &__img {
+    width: 70%;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-box {
+      position: relative;
+      flex-basis: 23.5rem;
+      height: 24.7rem;
+      background: linear-gradient(
+        to bottom,
+        $color-blue 0%,
+        $color-blue 50%,
+        $color-grey 50%,
+        $color-grey 100%
+      );
+      margin-right: 3rem;
+
+      @include respond(normal) {
+        flex-basis: 21.5rem;
+        height: 21.7rem;
+      }
+    }
+  }
+
+  &__details {
+    align-self: flex-start;
+    flex: 1;
+    display: flex;
+    &-left {
+      border-right: 1px solid rgba(51, 51, 51, 0.2);
+    }
+
+    &-right {
+      padding-left: 3rem;
+    }
+
+    &-item {
+      &--left {
+        width: 24rem;
+        font-weight: normal;
+        font-size: 2rem;
+        line-height: 2.3rem;
+
+        color: #9f9f9f;
+        margin-bottom: 2rem;
+
+        @include respond(normal) {
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+        }
+      }
+
+      &--right {
+        font-weight: normal;
+        font-size: 2rem;
+        line-height: 2.3rem;
+        color: $color-blue;
+        margin-bottom: 2rem;
+
+        @include respond(normal) {
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+
+    &-name {
+    }
+
+    &-date {
+    }
+
+    &-committee {
+    }
+
+    &-venue {
+    }
+  }
+
+  .btn-briefcase {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: $color-blue !important;
+    padding: 1rem 2rem;
+    color: $color-white;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    border-radius: 3px;
+
+    @include respond(normal) {
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+    }
+  }
+}

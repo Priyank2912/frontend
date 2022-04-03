@@ -1,0 +1,147 @@
+@import '../../sassStyles/abstracts/_variables';
+
+.commety-body {
+  width: 93.6rem;
+  background-color: $color-white;
+  padding: 2rem;
+  border-radius: 5px;
+
+  @include respond(normal) {
+    width: 90.6rem;
+  }
+
+  display: flex;
+
+  &__left {
+    width: 64.5rem;
+  }
+
+  &__img {
+    @include respond(normal) {
+      width: 62.5rem;
+    }
+    &-box {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: $color-blue;
+    margin-bottom: 1.5rem;
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-align: justify;
+
+    &-gap {
+      flex-basis: 2rem;
+      opacity: 0;
+    }
+
+    &-box {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__right {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__agendas {
+    list-style: none;
+    &-box {
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      text-align: justify;
+      margin-bottom: 1.5rem;
+    }
+
+    &-item {
+      font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+      margin-bottom: 1.5rem;
+
+      @include respond(normal) {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+
+  &__level {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+
+    @include respond(normal) {
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+    }
+    &-title {
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
+
+    &-box {
+      flex: 1;
+    }
+  }
+
+  &__vacancy {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: $color-blue;
+    background-color: $color-white;
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    &-box {
+      background-color: $color-blue;
+      color: $color-white;
+      padding: 1.5rem;
+      justify-self: flex-end;
+      border-radius: 3px;
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      margin-bottom: 1rem;
+    }
+
+    &-number {
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 2.3rem;
+    }
+
+    &-text {
+      width: 100%;
+      font-weight: normal;
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+    }
+  }
+}

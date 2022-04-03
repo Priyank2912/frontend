@@ -1,0 +1,463 @@
+@import '../../../sassStyles/abstracts/_variables';
+
+.booking-form {
+  background-color: $color-white;
+  border-radius: 5px;
+  padding: 2.5rem;
+
+  &__box {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__head {
+    display: flex;
+  }
+
+  &__body {
+  }
+
+  &__img {
+    width: 70%;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &-box {
+      position: relative;
+      width: 23.5rem;
+      height: 24.7rem;
+      background: linear-gradient(
+        to bottom,
+        $color-blue 0%,
+        $color-blue 50%,
+        $color-grey 50%,
+        $color-grey 100%
+      );
+      margin-bottom: 1.5rem;
+      border-radius: 3px;
+      overflow: hidden;
+      margin-right: 14rem;
+
+      @include respond(normal) {
+        width: 20.5rem;
+        height: 21.7rem;
+        margin-right: 17rem;
+      }
+    }
+  }
+
+  &__card {
+    background-color: $color-white-off;
+    width: 41.9rem;
+    height: 24.7rem;
+    padding: 1rem 2rem;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    border-radius: 3px;
+    // overflow: hidden;
+
+    @include respond(normal) {
+      height: 21.7rem;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+    }
+
+    &-title {
+      font-weight: normal;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+      @include respond(normal) {
+        font-size: 2.1rem;
+        line-height: 2.4rem;
+        padding-bottom: 0.7rem;
+      }
+    }
+
+    &-committee {
+      position: relative;
+      &-box {
+        padding: 1rem 0;
+        display: flex;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      }
+
+      &--nation {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+
+        @include respond(normal) {
+          font-size: 1.3rem;
+          line-height: 1.5rem;
+          margin-bottom: 3px;
+        }
+      }
+
+      &--name {
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+      }
+      &--dropdown {
+        list-style-type: none;
+        width: 110%;
+        display: block;
+        max-height: 30rem;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        overflow-y: scroll;
+        background-color: #ffffff;
+        padding: 0 8px !important;
+        filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.25));
+        border-radius: 3px;
+
+        li {
+          padding: 10px 0px !important;
+          border-bottom: 1px solid black;
+          cursor: pointer;
+        }
+        li:last-child {
+          border-bottom: none;
+        }
+      }
+      &--dropdown::-webkit-scrollbar {
+        display: none;
+      }
+      &-btn {
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.2rem;
+
+        // @include respond(normal) {
+        //   font-size: 1.2rem;
+        // line-height: 1.4rem;
+        // }
+        /* identical to box height */
+
+        text-decoration-line: underline;
+        color: $color-blue;
+        &-box {
+          align-self: flex-end;
+          justify-content: flex-end;
+          margin-left: auto;
+        }
+      }
+    }
+
+    &-location {
+      display: flex;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      &-link {
+        color: $color-blue;
+        text-decoration: underline;
+        display: inline-block;
+        margin-left: 2px;
+        &-box {
+          font-weight: 300;
+          font-size: 1rem;
+          line-height: 1.2rem;
+          align-self: flex-end;
+          justify-content: flex-end;
+          margin-left: auto;
+        }
+      }
+    }
+
+    &-time {
+      margin-top: 1rem;
+      @include respond(normal) {
+        margin-top: 5px;
+      }
+    }
+
+    &-date {
+      margin-top: 1rem;
+      @include respond(normal) {
+        margin-top: 3px;
+        margin-bottom: 3px;
+      }
+    }
+
+    &-text {
+      margin-top: 5px;
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+
+      @include respond(normal) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__body {
+    padding-top: 4rem;
+    position: relative;
+  }
+
+  &__field-group {
+    width: 100%;
+    &-box {
+      display: flex;
+      margin-bottom: 3rem;
+
+      &--nd {
+        height: 105.3px;
+      }
+
+      &--ic {
+      }
+
+      &--c {
+      }
+
+      &--faa {
+      }
+    }
+  }
+
+  &__line {
+    width: 8px;
+    height: 100% inherit;
+    border-radius: 3px;
+    background-color: #c4c4c4;
+    margin-right: 2rem;
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__label {
+    flex-basis: 28.9rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    margin-right: 6.5rem;
+
+    @include respond(normal) {
+      font-size: 2rem;
+      line-height: 2.3rem;
+    }
+
+    &--name {
+      // padding-right: 24rem;
+      margin-right: 6rem;
+      padding-right: 2rem;
+    }
+
+    &--city {
+      padding-right: 25.2rem;
+    }
+
+    &--institution {
+      padding-right: 19.6rem;
+    }
+
+    &--subtitle {
+      margin-top: 5px;
+      width: 23rem;
+      font-weight: normal;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+  }
+
+  &__first-name,
+  &__last-name,
+  &__date,
+  &__month,
+  &__year,
+  &__age,
+  &__institution,
+  &__city,
+  &__phone,
+  &__email {
+    margin-right: 2rem;
+    background-color: $color-white-off;
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+    border: 1px solid transparent;
+
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $color-blue;
+
+    box-sizing: border-box !important;
+
+    &:focus {
+      background-color: $color-white;
+      outline: none;
+      border: 1px solid $color-blue;
+    }
+
+    &::placeholder {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: $color-blue;
+    }
+  }
+
+  &__first-name {
+    margin-left: -5px;
+  }
+
+  &__first-name,
+  &__last-name {
+    width: 49rem;
+    @include respond(normal) {
+      width: 36rem;
+    }
+  }
+
+  &__last-name {
+    @include respond(normal) {
+      width: 38rem;
+    }
+  }
+
+  &__date,
+  &__month {
+    width: 8rem;
+    text-align: center;
+    margin-left: -1rem;
+  }
+
+  &__year {
+    margin-left: -1rem;
+  }
+
+  &__age {
+    width: 7rem;
+  }
+
+  &__institution {
+    width: 100%;
+    margin-left: -1rem;
+  }
+
+  &__city {
+    width: 100%;
+    margin-left: -1rem;
+  }
+
+  &__phone {
+    margin-right: 16.5rem;
+    width: 13rem;
+
+    @include respond(normal) {
+      margin-right: 10.5rem;
+    }
+
+    &:focus {
+      border-left: none;
+    }
+
+    &-pre {
+      margin-left: -1rem;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      padding: 1rem 1.5rem;
+      border: 1px solid $color-blue;
+    }
+  }
+
+  &__email {
+    width: 28.6rem;
+    margin-left: -1rem;
+
+    @include respond(normal) {
+      margin-left: 2rem;
+    }
+  }
+
+  &__btn {
+    margin-left: -1rem;
+    margin-right: 2rem;
+    &--lg {
+      width: 12rem;
+    }
+
+    &--sm {
+      width: 8rem;
+    }
+  }
+
+  &__checkout-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5rem;
+  }
+}
+
+.age,
+.email {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  margin-left: 3rem;
+  margin-right: 2rem;
+}
+
+.email {
+  @include respond(normal) {
+    margin-right: 0;
+  }
+}
+
+.btn-checkout {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  background-color: $color-blue !important;
+  padding: 1rem 1.5rem;
+  color: $color-white;
+  border-radius: 5px;
+
+  @include respond(normal) {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+
+  &:active {
+    background-color: $color-blue-dark !important;
+  }
+}
+
+.thin-line {
+  margin-top: 50px;
+  width: 1px;
+  height: 510px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+
+.booking-form__first-name:focus .booking-form__line {
+  background-color: $color-blue !important;
+}

@@ -1,0 +1,122 @@
+@import '../../../sassStyles/abstracts/_variables';
+.navbar {
+  background-color: $color-white;
+
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 4px 4px 0px #00000040;
+
+  // box-shadow: 0px 0px 5px black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav {
+  list-style: none;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-icon {
+    @include respond(normal) {
+      width: 90%;
+      height: 90%;
+    }
+  }
+
+  &-left {
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+  }
+
+  &-item {
+    &:not(:last-of-type) {
+      margin-right: 3rem;
+    }
+  }
+
+  .logo {
+    margin-left: auto;
+    @include respond(normal) {
+      width: 85%;
+      height: 85%;
+    }
+  }
+}
+
+.sign-in {
+  &__icon {
+  }
+
+  &__text {
+  }
+}
+
+.btn-nav {
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  &:active {
+    border: none;
+  }
+  border: 1px solid #369fff;
+  width: 10rem;
+  height: 3.2rem;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  color: #369fff;
+  background-color: white;
+}
+.signIn {
+  position: relative;
+}
+.profilebox {
+  height: auto;
+  width: 38rem;
+  box-sizing: border-box;
+  position: absolute;
+  top: 3rem;
+  right: 0px;
+  display: none;
+}
+.signIn:hover .profilebox {
+  display: block;
+}
+
+.search-box {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 3px;
+  background-color: $color-white-off;
+  outline: none;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  color: $color-blue;
+  border: 1px solid transparent;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $color-blue;
+  }
+
+  &::placeholder{
+    color: $color-blue;
+    font-style: italic;
+  }
+}

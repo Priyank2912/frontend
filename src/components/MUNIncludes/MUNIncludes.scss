@@ -1,0 +1,116 @@
+@import '../../sassStyles/abstracts/_variables';
+
+.MUNIncludes {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  background-color: $color-white;
+  width: 28.2rem;
+//   height: 38.4rem;
+  box-shadow: 6px 6px 6px 0px #00000040;
+  border-radius: 5px;
+  padding: 1.5rem;
+  // margin-top: 18.8rem;
+  // position: fixed;
+
+  @include respond(normal) {
+    transform: translateX(-3rem);
+  }
+
+  &__price {
+    font-weight: normal;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &-item {
+      font-weight: normal;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: $color-blue;
+    }
+
+    &-line {
+      flex-basis: 3rem;
+      height: 1px;
+
+      background-color: $color-blue;
+    }
+  }
+
+  &__text {
+      margin-bottom: 1.5rem;
+  }
+
+  &__accomodation {
+      margin-bottom: 1.5rem;
+    &-title {
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      margin-bottom: 5px;
+    }
+
+    &-subtitle {
+    }
+
+    &-link {
+      color: $color-blue;
+      text-decoration: underline;
+      &-box {
+      }
+    }
+  }
+
+  &__application {
+      margin-bottom: 1rem;
+    &-title {
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      margin-bottom: 5px;
+    }
+
+    &-date {
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+    }
+
+    &-text {
+    }
+
+    &-link {
+      color: $color-blue;
+      text-decoration: underline;
+    }
+  }
+
+  &-icon {
+  }
+}
+
+.btn-include {
+    display: flex !important;
+    width: 100%;
+    background-color: $color-blue !important;
+    border-radius: 3px;
+    color: $color-white;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}

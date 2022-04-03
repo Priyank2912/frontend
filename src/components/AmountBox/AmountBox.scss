@@ -1,0 +1,70 @@
+@import '../../sassStyles/abstracts/_variables';
+
+.amount-box {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  &-top {
+  }
+
+  &-bottom {
+  }
+
+  &-total {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 1rem;
+  }
+
+  &-mun-cost {
+    margin-top: 1rem;
+  }
+
+  &-total,
+  &-mun-cost,
+  &-accomodation,
+  &-premium,
+  &-taxes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  &-bottom {
+  }
+
+  &-price {
+    color: $color-blue;
+  }
+}
+
+.total-price {
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+.btn-amount-box {
+  display: block !important;
+  width: 100%;
+  background-color: $color-blue !important;
+  color: $color-white;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  padding: 1rem 4rem;
+  border-radius: 3px;
+  margin-top: 1rem;
+
+  @include respond(normal) {
+    font-size: 1.6rem;
+  line-height: 1.8rem;
+  }
+
+  &:active{
+    background-color: $color-blue-dark !important;
+  }
+}

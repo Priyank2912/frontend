@@ -1,0 +1,40 @@
+@import './../../../sassStyles/abstracts/_variables.scss';
+
+.section-main {
+  width: 100%;
+  padding: 10rem 0;
+  padding-bottom: 0;
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 20rem;
+  grid-column-gap: 0;
+  margin-bottom: 15rem;
+
+  @include respond(normal) {
+    padding: 7rem 0;
+    grid-row-gap: 12rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.section-city {
+}
+
+.section-best {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.section-special {
+  justify-self: flex-end;
+}
+
+.section-blog {
+  justify-self: flex-end;
+  margin-left: 2rem;
+}
+
+.section-explore {
+  margin-bottom: 10rem;
+}

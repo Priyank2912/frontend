@@ -1,0 +1,74 @@
+@import '../../sassStyles/abstracts/_variables';
+
+.section-city {
+  background-color: transparent;
+  @include respond(normal) {
+    margin-right: -2rem;
+  }
+
+  &__top {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+  }
+
+  &__right {
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  &__text {
+    width: 100%;
+    text-align: right;
+    margin-top: 1rem;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  &__dropdown {
+    box-sizing: content-box;
+    width: 11.7rem;
+    height: 2.3rem;
+    outline: none;
+    border: none;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-align: right;
+    color: $color-grey-dark-1;
+    border: 1px solid $color-blue;
+    border-left: none;
+
+    &--icon {
+      &-box {
+        border: 1px solid $color-blue;
+        border-right: none;
+        padding-top: 2px;
+      }
+    }
+
+    &-box {
+      background-color: $color-white;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@mixin respond($breakpoint) {
+  // @if $breakpoint == phone {
+  //   @media (max-width: 37.5em) {
+  //     @content;
+  //   }
+  // }
+
+  // @if $breakpoint == tab-port {
+  //   @media (max-width: 56.25em) {
+  //     @content;
+  //   }
+  // }
+
+  // @if $breakpoint == tab-land {
+  //   @media (max-width: 75em) {
+  //     @content;
+  //   }
+  // }
+
+  @if $breakpoint == normal {
+    @media (max-width: 1550px) {
+      @content;
+    }
+  }
+
+  // @if $breakpoint == big-desktop {
+  //   @media (min-width: 112.5em) {
+  //     @content;
+  //   }
+  // }
+}
+
+// colors
+
+$color-blue: #369fff;
+$color-blue-dark: #2a81d3;
+$color-white: #ffffff;
+$color-white-off: #f8f8f8;
+$color-white-transperent: rgba(0, 0, 0, 0.1);
+$color-alert: red;
+$color-grey: #f0f0f0;
+$color-grey-dark-1: #6f6f6f;
+$color-grey-dark-2: #333;
+
+$color-black: #000000;
+
+// $button-padding:"5px";
+
+// grids
+
+// $grid-width: 114rem;
+// $gutter-horizontal: 6rem;
+// $gutter-vertical: 8rem;
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @include respond(normal) {
+    max-width: 120rem;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  display: inline-block;
+}

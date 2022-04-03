@@ -1,0 +1,131 @@
+@import '../../sassStyles/abstracts/_variables';
+
+.section-blog {
+  height: 33.7rem;
+  width: 61.7rem;
+
+  @include respond(normal) {
+    padding-left: 4rem;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    &-left {
+    }
+
+    &-right {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  &__link-more {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-decoration-line: underline;
+
+    color: #369fff;
+  }
+
+  &__link-continue {
+    width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    /* identical to box height */
+
+    text-decoration-line: underline;
+
+    color: #369fff;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-bottom: 2.3rem;
+  }
+
+  &__img {
+    @include respond(normal) {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-box {
+      margin-right: 2.3rem;
+      @include respond(normal) {
+        width: 18.2rem;
+        // margin-right: 2rem;
+
+        // width: 16.2rem;
+        // height: ;
+      }
+    }
+  }
+
+  &__content {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-bottom: 2rem;
+
+    @include respond(normal) {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+    }
+
+    &-box {
+      background-color: $color-white;
+      border-radius: 5px;
+      padding: 2rem;
+      position: relative;
+      @include respond(normal) {
+        flex: 1;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    @include respond(normal) {
+      height: 26.3rem;
+    }
+  }
+
+  &__share {
+    &-box {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+}
+
+.blog-title-1 {
+  margin-bottom: 2rem;
+  @include respond(normal) {
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+  }
+}
+
+.blog-title-2 {
+  margin-bottom: 1rem;
+  @include respond(normal) {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+}

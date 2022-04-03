@@ -1,0 +1,49 @@
+@import '../../sassStyles/abstracts/_variables';
+
+.section-MUN {
+  width: 85.8%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15rem;
+  margin-bottom: 30rem;
+  position: relative;
+
+  &__title {
+    transform: translateY(15rem);
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+
+    @include respond(normal) {
+      margin-bottom: 5.5rem !important;
+    }
+  }
+
+  &-main {
+  }
+
+  &-right {
+    height: 57rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    margin-left: 95.6rem;
+
+    &--2{
+      position: absolute;
+      top: 103.5rem;
+      right: -21rem;
+      display: none;
+    }
+
+    // position: relative;
+  }
+
+  &-timer {
+    margin-bottom: 2rem !important;
+  }
+
+  &-includes {
+    margin-top: 2rem;
+  }
+}

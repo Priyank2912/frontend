@@ -1,0 +1,19 @@
+@import '../../sassStyles/abstracts/_variables';
+
+.slider-box{
+    margin-top: 8rem;
+    padding: 1rem 0;
+    background-color: $color-white;
+    z-index: 500;
+    @include respond(normal){
+        height: 27rem;
+    }
+
+   
+}
+
+.slide-image{
+    @include respond(normal){
+        height: 25rem;
+}
+    }

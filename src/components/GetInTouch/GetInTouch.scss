@@ -1,0 +1,43 @@
+@import '../../sassStyles/abstracts/_variables';
+@import '../../sassStyles/base/_typography.scss';
+
+.touch {
+  padding: 1.5rem;
+  width: 93.6rem;
+  background-color: $color-white;
+  border-radius: 3px;
+  margin-bottom: 10rem;
+
+  @include respond(normal) {
+    width: 90.6rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $color-grey-dark-2;
+
+    &-box {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+    }
+
+    &-icon {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  }
+}

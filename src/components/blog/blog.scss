@@ -1,0 +1,190 @@
+@import '../../sassStyles/abstracts/_variables';
+.mainBlogContainer{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rem; 
+    margin-bottom: 8rem;
+    // justify-content: center;
+    // align-items: center;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Blogcontiner{
+        width: 100%;
+        max-width: 1100px;
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        flex-direction: column;
+    }
+    h1{
+        width: 80% !important;
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+        display: flex;
+        margin: 0px !important;
+        justify-self: center !important;
+    }
+}
+.BlogComponentContainer{
+    width: 80%;
+    transition: height 1s linear;
+    box-shadow: 0px 0px 3px black;
+    border-radius: 0.5rem;
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 5.5rem ;
+    display: flex;
+    flex-direction: row;
+
+    @include respond(normal) {
+        width: 80%;
+        margin: 4.4rem 0;
+    }
+
+    .image{
+        height: 32.5rem;
+        width: 32.5rem;
+        display: flex;
+        border-radius: .5rem;
+
+        @include respond(normal) {
+            height: 26rem;
+            width: 26rem;
+        }
+
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: .5rem;
+        }
+    
+    }
+    .blogData{
+        display: flex;
+        justify-content: space-around;
+        transition: height 1s linear;
+        flex: 1;
+        padding-left: 5rem;
+        padding-right: 4rem;
+        flex-direction: column;
+        .blogHeading{
+            display: flex;
+            // padding: .5rem;
+            
+            flex-direction: row;
+            align-items: center;
+            
+            justify-content: space-between;
+            h1{
+                font-weight: 300;
+                font-size: 2.8rem;
+                display: flex;
+
+                @include respond(normal) {
+                    font-size: 2.4rem;
+                }
+            }
+            h4{
+                float: right;
+                font-size: 1.4rem;
+                font-weight: 300;
+                display: flex;
+                padding: .5rem;
+                .date{
+                    margin-left: .5rem;
+                }
+
+                @include respond(normal) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    hr{
+        margin: .5rem 0 .5rem 0;
+    }
+    .blog{
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin: .5rem 0;
+            display: flex;
+
+            @include respond(normal) {
+                font-size: 2.1rem;
+            }
+
+        }
+        .content{
+            display: flex;
+            flex: 1;
+            .LinesEllipsis{
+                transition: height 1s linear;
+                text-align: justify;
+                font-size: 1.6rem;
+                font-weight: 300;
+                line-height: 2rem;
+                letter-spacing: 7%;
+
+                @include respond(normal) {
+                    font-size: 1.5rem;
+                    line-height: 1.8rem;
+                }
+            }
+        }
+    }
+    button{
+        background-color: transparent;
+        color: $color-blue;
+        border: none;
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-end;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    button:hover{
+        text-decoration: underline;
+    }
+}
+@media (max-width:768px){
+    .BlogComponentContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .image{
+            width: 95%;
+            max-height: 25rem;
+            max-width: 25rem;
+        }
+        .blogHeading{
+            margin-top: 3rem;
+            flex-direction: column !important;
+        }
+        
+    }
+    
+}
+@media (max-width:468px){
+.blogData{
+    padding: 1rem !important;
+}
+}
+
+.btn-blog{
+    display: inline-block;
+    margin-top: 3rem;
+}
+
+.blog-title{
+    margin-bottom: 3rem !important; 
+}

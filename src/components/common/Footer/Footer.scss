@@ -1,0 +1,91 @@
+@import '../../../sassStyles/abstracts/_variables';
+
+.footer {
+  padding-top: 2rem;
+  background-color: $color-white-off;
+
+  &__title {
+    padding-bottom: 2.3rem;
+    display: flex;
+    align-items: center;
+
+    &--front-line {
+      // min-width: 2.5rem;
+      flex: 1;
+      height: 0px;
+      border-bottom: 2px solid $color-blue;
+      margin-right: 1.7rem;
+    }
+
+    &--back-line {
+      // min-width: 128rem;
+      flex: 1;
+      height: 0px;
+      border-bottom: 2px solid $color-blue;
+      margin-left: 1.7rem;
+    }
+
+    &--logo-box {
+      transform: translateY(5px);
+    }
+
+    .logo {
+      @include respond(normal) {
+        display: inline-block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__nav {
+    list-style: none;
+    display: flex;
+    margin-bottom: 3rem;
+    &--item {
+    }
+
+    &--link {
+      display: inline-block;
+      font-size: 1.6rem;
+      margin-right: 1.5rem;
+      text-decoration: none;
+      color: #a7a7a7;
+
+      @include respond(normal) {
+        font-size: 1.4rem;
+        margin-right: 1.4rem;
+      }
+    }
+  }
+
+  &__icon {
+    list-style: none;
+    margin-top: -1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3.8rem;
+
+    &--item {
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    &--link {
+    }
+  }
+}
+
+.footer-link-icon {
+  @include respond(normal) {
+    height: 80%;
+    width: 80%;
+  }
+}
+
+.footer-box {
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+  justify-content: center;
+  align-items: center;
+}

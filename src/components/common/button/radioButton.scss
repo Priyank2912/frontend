@@ -1,0 +1,37 @@
+@import '../../../sassStyles/abstracts/_variables';
+.radioButton{
+    width: 100%;
+    transition: all .1s linear;
+    border-radius: 0.3rem;
+    display: flex;
+    height: 4rem;
+    border: 1px solid $color-blue;
+    padding: 5px 10px 5px 0px;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: row;
+    .radioArea{
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .radioBorder{
+            height: 1.8rem;
+            width: 1.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            box-sizing: border-box;
+        }
+        .text{
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-left: 1 rem;
+        }
+    }   
+}
+.radioButton:hover{
+    
+    transform: scale(1.06);
+}

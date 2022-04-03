@@ -1,0 +1,76 @@
+@import '../../../sassStyles/abstracts/_variables';
+@import '../../../sassStyles/base/_animations';
+
+.popUpOuterContainer{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: $color-white-transperent;
+    
+    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    z-index: 11111;
+    align-items: center;
+}
+.smallPopUpInnerContainer,.largePopUpInnerContainer{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.56rem;
+    box-shadow: 1px 1px 5px black;
+    border-radius: .3rem;
+    height: auto;
+    background-color: white;
+    
+}
+.enterAnimaiton{
+    animation-name: comeIn;
+    animation-timing-function: linear;
+    animation-duration: .3s;
+    perspective: 10rem;
+}
+.exitAnimation{
+    animation-name: comeOut;
+    animation-timing-function: linear;
+    animation-duration: .3s;
+    perspective: 10rem;
+}
+.smallPopUpInnerContainer{
+    max-width: 46.2rem;
+}
+.largePopUpInnerContainer{
+    max-width: 65rem;
+}
+.popUp-header{
+    display: flex;
+    justify-content: flex-end;
+    .btn{
+        height: 3.2rem;
+        width: 3.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: none;
+        padding: .1rem;
+        background-color: $color-white;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: $color-blue;
+    }
+    .btn:hover svg path{
+        fill: $color-white;
+    }
+}
+.popUp-body{
+    max-height: 90vh;
+    overflow-y: scroll;
+}
+.popUp-body::-webkit-scrollbar {
+    width: 0px;
+  }
+

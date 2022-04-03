@@ -1,0 +1,106 @@
+@import '../../sassStyles/abstracts/_variables';
+
+.MUNTimer {
+  width: 28.2rem;
+  height: 17.8rem;
+  background-color: $color-white;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  box-shadow: 6px 6px 6px 0px #00000040;
+  // position: fixed;
+
+  @include respond(normal) {
+    // width: 26.2rem;
+    flex: 1;
+    height: auto;
+    margin-bottom: 2rem;
+    // height: 17.8rem;
+    transform: translateX(-3rem);
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: #369fff;
+    margin-bottom: 1.5rem;
+
+    @include respond(normal) {
+    }
+  }
+
+  &__loading {
+    width: 100%;
+    height: 5px;
+    border: 1px solid $color-blue;
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+
+    &-fill {
+      width: 60%;
+      height: 5px;
+      background-color: $color-blue;
+      transform: translateY(-1px);
+    }
+  }
+
+  &__time {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      font-weight: normal;
+      font-size: 2.8rem;
+      line-height: 3.3rem;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #369fff;
+    }
+  }
+
+  &__units {
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin-bottom: 2rem;
+    &-days {
+    }
+
+    &-hours {
+      transform: translateX(8px);
+    }
+
+    &-minutes {
+      transform: translateX(1rem);
+    }
+
+    &-seconds {
+      transform: translateX(5px);
+    }
+  }
+
+  &__text {
+    width: 100%;
+    font-weight: normal;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+
+    color: #7a7a7a;
+  }
+
+  &__link {
+    font-weight: normal;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    text-decoration-line: underline;
+
+    color: #369fff;
+  }
+}

@@ -1,0 +1,15 @@
+@import './../../../sassStyles/abstracts/_variables.scss';
+
+.MUN {
+  width: 100%;
+}
+
+.section-commety {
+  margin-bottom: 7rem;
+}
+
+.section-MUN {
+  @include respond(normal) {
+    margin-top: -2rem;
+  }
+}

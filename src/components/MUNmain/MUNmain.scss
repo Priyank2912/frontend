@@ -1,0 +1,210 @@
+@import '../../sassStyles/abstracts/_variables';
+
+.MUN-main {
+  width: 93.6rem;
+  height: 53.7rem;
+  background-color: $color-white;
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  padding: 1rem;
+  position: relative;
+  border-radius: 5px;
+
+  @include respond(normal) {
+    width: 90.6rem;
+    height: auto;
+  }
+
+  &__left {
+    width: 65.5rem;
+  }
+
+  &__image {
+    @include respond(normal) {
+      width: 62.5rem;
+      height: auto;
+    }
+    &-box {
+      width: 100%;
+
+      @include respond(normal) {
+        width: 80%;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__description {
+    width: 50%;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    text-align: justify;
+    padding: 1rem;
+
+    &-box {
+      display: flex;
+    }
+  }
+
+  &__feature-list {
+    width: 100%;
+    list-style: none;
+    padding: 1rem;
+  }
+
+  &__feature-item {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+  }
+
+  &__btn-box {
+  }
+
+  &__btn {
+    width: 24rem;
+    height: 4rem;
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    &-box {
+      // margin-top: -3rem;
+    }
+
+    &--download {
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      /* identical to box height */
+
+      color: #8d8d8d;
+      background-color: #e5e5e5 !important;
+    }
+
+    &--briefcase {
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+
+      color: #ffffff;
+      background-color: $color-blue !important;
+    }
+  }
+
+  &__share {
+    &-box {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+
+  &__icon {
+    @include respond(normal) {
+      width: 2.5rem;
+      height: auto;
+    }
+    &-box {
+      margin-top: 5px;
+      margin-right: 2rem;
+    }
+  }
+
+  &__details {
+  }
+
+  &__title {
+    margin-bottom: 7px;
+    @include respond(normal) {
+      font-size: 1.8rem;
+      line-height: 2rem;
+    }
+  }
+
+  &__subtitle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+
+    @include respond(normal) {
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  &__location {
+    &--main {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+
+      @include respond(normal) {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+      }
+      display: inline-block;
+      width: 100%;
+    }
+
+    &--city {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    &--map {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    &--link {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+
+      text-decoration-line: underline;
+
+      color: $color-blue;
+    }
+  }
+
+  &__close {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+}
